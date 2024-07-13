@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Inter, M_PLUS_1 } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Image from 'next/image';
 import logo from '../assets/images/logo.png';
+import en from '../assets/images/flags/india-flag.png'
+import usa from '../assets/images/flags/usa.jpeg'
+import cn from '../assets/images/flags/canada.jpeg'
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { IoSearch } from "react-icons/io5";
 
@@ -31,27 +34,42 @@ export default function RootLayout({
             </div>
           </div>
           <div className="pr-4 flex">
-            <div className="text-white text-xm px-2 pt-2 absolute ">
+            <div className="text-white text-xm px-2 pt-2 absolute">
               <HiOutlineLocationMarker />
             </div>
-            <div className="text-white text-xs px-8 ">
+            <div className="text-white text-xs px-8">
               <p>Delivering to Ludhiana 142027</p>
               <p>Update Location</p>
             </div>
             <div className="flex">
-              <select className="bg-[#e6e6e6] rounded-l-md p-2 w-12 h-10">
+              <select className="bg-[#e6e6e6] text-xm rounded-l-md p-2 w-16 h-10">
                 <option>All</option>
                 <option>Eletronic</option>
                 <option>Furiture</option>
                 <option>books</option>
                 <option>Deals</option>
               </select>
-              <input type="text" id="search" className="h-10 w-64" />
-              <div className="bg-yellow-500 w-12 h-10 rounded-r-md flex items-center justify-center">
-                <IoSearch className="text-3xl" />
+              <input type="text" id="search" className="h-10 text-black w-64" />
+              <div className="bg-[#febd69] w-12 h-10 rounded-r-md flex items-center justify-center">
+                <IoSearch className="text-2xl " />
               </div>
             </div>
+            <div className="flex w-4 h-8">
+              <Image src={en} alt="" width="50" height="50" />
+              <select>
+                <option>
+                  <div className="p-2">
+                    <p>EN</p>
+
+                  </div>
+                </option>
+              </select>
+
+            </div>
           </div>
+        </div>
+        <div className="">
+          {children}
         </div>
       </body>
     </html>
