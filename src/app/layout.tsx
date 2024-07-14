@@ -3,9 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Image from 'next/image';
 import logo from '../assets/images/logo.png';
-import en from '../assets/images/flags/india-flag.png'
-import usa from '../assets/images/flags/usa.jpeg'
-import cn from '../assets/images/flags/canada.jpeg'
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { IoSearch } from "react-icons/io5";
 
@@ -25,12 +22,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="flex bg-[#131921] p-3 mr-5 w-full">
-          <div className="flex px-2">
-            <div>
+          <div className="flex px-1">
+            <div className="mt-1">
               <Image src={logo} alt="Amazone.in" width="100" height="100" />
             </div>
-            <div className="text-white relative pt-2">
-              <p>.in</p>
+            <div className="text-white relative pt-1">
+              <p className="pt-[1px]">.in</p>
             </div>
           </div>
           <div className="pr-4 flex">
@@ -53,14 +50,13 @@ export default function RootLayout({
               <div className="bg-[#febd69] w-12 h-10 rounded-r-md flex items-center justify-center">
                 <IoSearch className="text-2xl " />
               </div>
-            </div>
-            <div className="flex w-4 h-8">
-              <Image src={en} alt="" width="50" height="50" />
-              <select>
+            </div >
+            <div className="flex h-8 custom-select">
+              <Image src="/flags/india.png" width="20" height="35" alt="India" className="mt-3 ml-5 " />
+              <select className="h-8 p-2 rounded-md bg-[#131921] text-white">
                 <option>
-                  <div className="p-2">
+                  <div className="p-2 text-xm ">
                     <p>EN</p>
-
                   </div>
                 </option>
               </select>
